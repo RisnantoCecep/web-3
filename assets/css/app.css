@@ -1,0 +1,46 @@
+.my-pagination .active .page-link {
+	background: #dc3545;
+	border-color: #dc3545;
+	color: #ffffff;
+}
+
+.my-pagination .page-link {
+	color: #00796b;
+}
+
+.galery-image {
+	aspect-ratio: 4 / 4;
+	object-fit: cover;
+}
+
+.max-line-3 {
+	line-height: 18px;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.teams-image {
+	aspect-ratio: 4 / 4;
+	object-fit: cover;
+}
+
+.btn-danger {
+	background-color: #00796b !important;
+	border-color: #00796b !important;
+}
+
+.btn-primary,
+.btn-danger i {
+	font-style: normal !important;
+}
+
+.btn-warning {
+	color: #ffffff !important;
+}
