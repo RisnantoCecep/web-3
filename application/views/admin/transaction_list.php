@@ -1,4 +1,4 @@
-<section class="container mt-5 mb-5">
+<section class="container mt-5" style="margin-bottom: 400px;">
     <h1 class="mb-4"><?= $title ?></h1>
     <?php if($this->session->flashdata("warning")): ?>
     <div class="alert alert-warning"><?= $this->session->flashdata("warning") ?></div>

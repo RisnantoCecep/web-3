@@ -82,6 +82,8 @@ class Transaction_model extends CI_Model {
         if($data){
             $this->db->select("*, CONCAT('".base_url('assets/img/galerys/')."', galery_image) as galery_image, galery_image as image_path");
             $this->db->join("galerys", "galerys.galery_id = transaction_detail.galery_id");
+            $this->db->join("categories", "categories.category_id = galerys.category_id");
+
             $data['details'] = $this->db->get_where("transaction_detail", ["transaction_id"=>$id])->result_array();
         }
         return $data;

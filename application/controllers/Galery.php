@@ -9,14 +9,16 @@
         }
 
         public function category($slug){
+        $this->load->library('pagination');
            $data["page"] = "galery/category";
            $data["category"] = $this->galery->get_category($slug);
            $data["title"] = $data["category"]["category_title"];
 
            $config['base_url'] = current_url();
-           $config['total-rows'] = $this->galery->countGalery($data["category"]["category_id"]);
+           
+           $config['total_rows'] = $this->galery->countGalery($data["category"]["category_id"]);
            $config['query_string_segment'] = 'pages';
-           $config['page_query_srting'] = true;
+           $config['page_query_string'] = true;
            $config['reuse_query_string'] = true;
            $config['per_page'] = 4;
 

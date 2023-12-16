@@ -1,9 +1,9 @@
 <section class="container mt-5 mb-1" id="order-view" data-clear="<?= $this->input->get('order') ? '1' : '0' ?>">
     <h1 class="mb-3">Detail Transaksi</h1>
         <div clas="row ">
-            <a href="<?= base_url(''); ?>" class="btn btn-primary mb-3 me-1"><i class="bi bi-printer">Print</i></a>
-            <a href="<?= base_url(''); ?>" class="btn btn-warning mb-3"><i class="bi bi-file-earmark-pdf"></i>Download Pdf</a>
-            <a href="<?= base_url(''); ?>" class="btn btn-success mb-3 ms-1"><i class="bi bi-file-earmark-excel"></i>Export ke Excel</a>
+            <a href="<?= base_url('laporan/cetak_transaksi/'.$id); ?>" class="btn btn-primary mb-3 me-1"><i class="bi bi-printer">Print</i></a>
+            <a href="<?= base_url('laporan/cetak_pdf/'.$id); ?>" class="btn btn-warning mb-3"><i class="bi bi-file-earmark-pdf"></i>Download Pdf</a>
+            <a href="<?= base_url('laporan/export_excel/'.$id); ?>" class="btn btn-success mb-3 ms-1"><i class="bi bi-file-earmark-excel"></i>Export ke Excel</a>
         </div>
         <div class="text-end">
             <a class="btn btn-danger p-2 mb-3" href="https://wa.me/6287879234369"><i class="bi bi-whatsapp" style="font-size: 15px;"> konfirmasi pembayaran</i></a>

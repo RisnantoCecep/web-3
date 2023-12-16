@@ -64,6 +64,7 @@ class Profile extends CI_Controller {
             $data["title"] = "Detail Transaksi";
             $data["page"] = "profile/order_detail";
             $data["order"] = $this->transaction->getOrder($id);
+            $data["id"] = $id;
             $this->load->view("templates/main", $data);
         }else{
             redirect(base_url('login'));
