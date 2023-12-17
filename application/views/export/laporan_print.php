@@ -6,29 +6,42 @@
     <title></title>
     <style type="text/css">
     .table-data{
-    width: 100%;
-    border-collapse: collapse;
+        width: 100%;
+        border-collapse: collapse;
     }
     .table-data tr th,
     .table-data tr td{
-    border:1px solid black;
-    font-size: 11pt;
-    font-family:Verdana;
-    padding: 15px;
+        border:1px solid black;
+        font-size: 11pt;
+        font-family:Verdana;
+        padding: 15px;
+        text-align: left;
+        padding: 8px;
     }
-    h3{
-    font-family:Verdana;
-    margin: 25px;
-    }
+    /* h3{
+        font-family:Verdana;
+        margin: 25px;
+    } */
 
-    .hr{
+    .d-produk{
         margin-top: 40px;
+        text-align: center;
+        border: 1px solid;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #186F65;
+        color: #fff;
+        padding: 8px;
+        font-family:Verdana;
+    }
+    tr:nth-child(even) {
+        background-color: #D6EEEE;
     }
     </style>
 </head>
 <body>
-    <h3><center>Detail Transaksi</center></h3><br>
-    <table class="table-data" border="1">
+    <h3 class="d-produk">Detail Transaksi</h3>
+    <table class="table-data">
         <thead>
             <tr>
                 <th>No</th>
@@ -56,16 +69,15 @@
             </tr>
         </tbody>
     </table>
-    <div>
-    <hr class="hr">
+    <div class="d-produk">
         <h3>Detail Produk</h3>
-    <hr>
     </div>
     
-    <table>
+    <table class="table-data">
         
         <thead>
             <tr>
+                <th>No</th>
                 <th>Nama Produk</th>
                 <th>Category</th>
                 <th>Jumlah</th>
@@ -75,6 +87,7 @@
         <tbody>
         <?php $no= 1; foreach($laporan['details'] as $laporans) : ?>
             <tr>
+                <td scope="row"><?= $no++; ?></td>
                 <td><?= $laporans['galery_title']; ?></td>
                 <td><?= $laporans['category_title']; ?></td>
                 <td><?= $laporans['detail_qty']; ?></td>
