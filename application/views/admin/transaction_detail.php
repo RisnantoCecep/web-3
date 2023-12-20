@@ -6,6 +6,11 @@
     <?php if($this->session->flashdata("success")): ?>
     <div class="alert alert-success"><?= $this->session->flashdata("success") ?></div>
     <?php endif ?>
+    <div clas="row ">
+            <a href="<?= base_url('laporan/cetak_transaksi/'); ?>" class="btn btn-primary mb-3 me-1"><i class="bi bi-printer">Print</i></a>
+            <a href="<?= base_url('laporan/cetak_pdf/') ?>;" class="btn btn-warning mb-3"><i class="bi bi-file-earmark-pdf"></i>Download Pdf</a>
+            <a href="<?= base_url('laporan/export_excel/'); ?>" class="btn btn-success mb-3 ms-1"><i class="bi bi-file-earmark-excel"></i>Export ke Excel</a>
+    </div>
     <div class="border p-4 mb-5">
         <div class="mb-3">
             <label for="" class="form-label">Kode transaksi</label>
